@@ -1,7 +1,7 @@
 .hero {
     margin-top: 124px;
     padding-top: 270px;
-    padding-bottom: 395px;
+    padding-bottom: 318px;
     position: relative;
     z-index: 1;
     overflow-x: hidden; 
@@ -223,12 +223,12 @@
 
 @media only screen and (max-width: 440px) {
     .hero__buttons {
-        top: calc(50% + 430px);
+        top: calc(50% + 260px);
     }
 }
 
-@media only screen and (max-width: 300px) {
+@media only screen and (max-width: 375px) {
     .hero__buttons {
-        top: calc(50% + 400px);
+        top: calc(50% + 470px);
     }
 }

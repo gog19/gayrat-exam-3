@@ -138,6 +138,30 @@
     }
 }
 
+@media
+    only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (   min--moz-device-pixel-ratio: 2),
+    only screen and (     -o-min-device-pixel-ratio: 2/1),
+    only screen and (        min-device-pixel-ratio: 2),
+    only screen and (                min-resolution: 192dpi),
+    only screen and (                min-resolution: 2dppx) { 
+
+        .team__heading::before {
+            background-image: url("../img/DP@2x.png");
+            background-size: contain;
+        }
+
+        .team__prev {
+            background-image: url("../img/left@2x.png");
+            background-size: contain;
+        }
+
+        .team__next {
+            background-image: url("../img/right@2x.png");
+            background-size: contain;
+        }
+}
+
 @media only screen and (max-width: 1130px) {
     .team__item-img {
         max-width: 99%;

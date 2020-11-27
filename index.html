@@ -10,7 +10,13 @@
 
 <body class="site-body site-body--nojs">
 
+    <!-- WEBSITESAYT ZOOM 80% uchun DEFAULT -->
+    <!-- 1024 px Ni korish uchun WIDTHga yozish kerak. Chunki menda 1023px ham bor  -->
+
+    <!-- HEADER  -->
     <header class="site-header">
+
+        <!-- HEADER-TOP  -->
         <div class="site-header__top header-top">
             <div class="container header-top__container">
                 <div class="header-top__phone">
@@ -31,6 +37,7 @@
             </div>
         </div>
 
+        <!-- HEADER-BOTTOM  -->
         <div class="container">
             <div class="site-header__bottom header-bottom">
                 <a class="header-bottom__logo logo" href="index.html">
@@ -90,8 +97,11 @@
         </div>
     </header>
 
+    <!-- MAIN  -->
     <main class="site-main">
         <h1 class="visually-hidden">Dental Clinic Practice</h1>
+
+        <!-- HERO  -->
         <section class="site-main__hero hero">
             <div class="container hero__container">
                 <h2 class="visually-hidden">Hero Corusel</h2>
@@ -133,6 +143,7 @@
             </ul>
         </section>
 
+        <!-- APPLICATION -->
         <section class="app">
             <div class="container app__container">
                 <ul class="app__list">
@@ -149,7 +160,7 @@
                             version of the prosthesis.</p>
                     </li>
                 </ul>
-                <form class="app__form form" action="https://echo.htmlacademy.ru">
+                <form class="app__form form" action="https://echo.htmlacademy.ru" method="POST">
                     <h3 class="form__heading">Appointment</h3>
                     <input class="form__input" type="text" name="name" placeholder="Name" required>
                     <input class="form__input form__input--phone" type="text" name="Phone" placeholder="phone" required>
@@ -165,12 +176,13 @@
             </div>
         </section>
 
+        <!-- SERVICES  -->
         <section class="services">
             <div class="container services__container">
                 <h2 class="services__title">Services</h2>
                 <p class="services__text">We provide a wide range of services from treatment to prosthetics. Therefore,
                     you do not need to go anywhere else.</p>
-                <button class="services__prev"></button>
+                <button class="services__prev" aria-label="You can move to left"></button>
                 <ul class="services__list">
                     <li class="services__item services__item--dental">
                         <a class="services__link" href="#">
@@ -202,10 +214,11 @@
                     </li>
                     <li class="services__item services__item--new"></li>
                 </ul>
-                <button class="services__next"></button>
+                <button class="services__next" aria-label="You can move to right"></button>
             </div>
         </section>
 
+        <!-- TECHNOLOGY  -->
         <section class="tech">
             <div class="tech__container container container--lg">
 
@@ -264,7 +277,8 @@
                             <div class="tech__content">
                                 <h4 class="tech__content-heading">Convenient location and working hours</h4>
                                 <p class="tech__content-text">Our clinic is located in the center of the Sverdlovsk
-                                    region, at: Street Raboche-Krestyanskaya 6. From the hypermarket “Semya” to our clinic - 5
+                                    region, at: Street Raboche-Krestyanskaya 6. From the hypermarket “Semya” to our
+                                    clinic - 5
                                     minutes on foot.
                                 </p>
                             </div>
@@ -274,13 +288,14 @@
             </div>
         </section>
 
+        <!-- TEAM  -->
         <section class="team">
             <div class="container team__container">
                 <h3 class="team__heading">Professional team</h3>
                 <p class="team__description">Dental Practice employs orthodontists and orthopedists, surgeons and
                     therapists, as well as children's dentists. All 13 dentists of our center are highly qualified
                     specialists with extensive experience.</p>
-                <button class="team__prev"></button>
+                <button class="team__prev" aria-label="You can move to left"></button>
                 <ul class="team__list">
                     <li class="team__item">
                         <img class="team__item-img" src="./img/anna.png"
@@ -304,10 +319,11 @@
                         <p class="team__item-job">Expert-class dentist</p>
                     </li>
                 </ul>
-                <button class="team__next"></button>
+                <button class="team__next" aria-label="You can move to right"></button>
             </div>
         </section>
 
+        <!-- QUALITY  -->
         <section class="quality">
             <div class="quality__container container container--lg">
                 <div class="quality__content">
@@ -333,6 +349,7 @@
             </div>
         </section>
 
+        <!-- REVIEWS  -->
         <section class="reviews">
             <div class="container">
                 <h2 class="reviews__heading">Reviews from our patients</h2>
@@ -364,31 +381,50 @@
             </div>
         </section>
 
+        <!-- LOCATION  -->
         <section class="location">
-            <a class="location__map" href="https://yandex.uz/maps/-/CCUEABFrOA" target="_blank">
-                <img src="./img/map.png" srcset="./img/map.png 1x, ./img/map@2x.png 2x" width="1920" height="760"
-                    aria-label="Location Map" alt="Location Map">
+            <a class="location__link" aria-label="Location Map" href="https://yandex.uz/maps/-/CCUEABFrOA"
+                target="_blank">
+
+                <picture>
+                    <source type="image/webp" media="(max-width: 375px)"
+                        srcset="./img/map3.webp 1x, ./img/map3@2x.webp 2x">
+                    <source type="image/png" media="(max-width: 375px)"
+                        srcset="./img/map3.png 1x, ./img/map3@2x.png 2x">
+
+                    <source type="image/webp" media="(max-width: 1024px)"
+                        srcset="./img/map2.webp 1x, ./img/map2@2x.webp 2x">
+                    <source type="image/png" media="(max-width: 1024px)"
+                        srcset="./img/map2.png 1x, ./img/map2@2x.png 2x">
+
+                    <source type="image/webp" srcset="./img/map.webp 1x, ./img/map@2x.webp 2x">
+                    <img class="location__map" src="./img/map.png" srcset="./img/map.png 1x, ./img/map@2x.png 2x"
+                        alt="Location Map">
+                </picture>
+
             </a>
             <div class="container location__container">
                 <h2 class="location__name">Convenient location and working hours</h2>
                 <p class="location__text">Our clinic is located in the center of the Sverdlovsk district, at the
                     address: Raboche-Krestyanskaya Street 6. From the bus stop “Family” hypermarket to our dental clinic
                     - 5 minutes on foot.</p>
-                <form class="location__form form" action="https://echo.htmlacademy.ru">
+                <form class="location__form form" action="https://echo.htmlacademy.ru" method="POST">
                     <h3 class="form__heading">Appointment</h3>
-                    <input class="form__input" type="text" name="name" placeholder="Name" required>
-                    <input class="form__input form__input--phone" type="text" name="Phone" placeholder="phone" required>
+                    <input class="form__input" type="text" aria-label="Your Name" name="name" placeholder="Name"
+                        required>
+                    <input class="form__input form__input--phone" type="text" aria-label="Your Phone" name="Phone"
+                        placeholder="phone" required>
                     <button class="form__btn" type="submit">Appointment</button>
                     <div class="form__bottom">
                         <p class="form__bottom-text">I give my consent to the storage and processing of personal data
                         </p>
-                        <input class="form__bottom-input visually-hidden" id="toggles" name="checkbox" type="checkbox"
-                            required>
+                        <input class="form__bottom-input visually-hidden" aria-label="Please check the box" id="toggles"
+                            name="checkbox" type="checkbox" required>
                         <label class="form__bottom-checkbox" aria-label="checkbox" for="toggles"></label>
                     </div>
                 </form>
             </div>
-        </section> 
+        </section>
     </main>
 
     <script>

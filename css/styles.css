@@ -956,7 +956,7 @@ img {
 .hero {
   margin-top: 124px;
   padding-top: 270px;
-  padding-bottom: 395px;
+  padding-bottom: 318px;
   position: relative;
   z-index: 1;
   overflow-x: hidden;
@@ -1170,13 +1170,13 @@ img {
 
 @media only screen and (max-width: 440px) {
   .hero__buttons {
-    top: calc(50% + 430px);
+    top: calc(50% + 260px);
   }
 }
 
-@media only screen and (max-width: 300px) {
+@media only screen and (max-width: 375px) {
   .hero__buttons {
-    top: calc(50% + 400px);
+    top: calc(50% + 470px);
   }
 }
 
@@ -1226,7 +1226,7 @@ img {
 
 .app__item--treat {
   padding-top: 38px;
-  padding-bottom: 57px;
+  padding-bottom: 58px;
   padding-left: 37px;
   padding-right: 37px;
   background: #FFD600;
@@ -2247,6 +2247,21 @@ img {
   opacity: 0.6;
 }
 
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .team__heading::before {
+    background-image: url("../img/DP@2x.png");
+    background-size: contain;
+  }
+  .team__prev {
+    background-image: url("../img/left@2x.png");
+    background-size: contain;
+  }
+  .team__next {
+    background-image: url("../img/right@2x.png");
+    background-size: contain;
+  }
+}
+
 @media only screen and (max-width: 1130px) {
   .team__item-img {
     max-width: 99%;
@@ -2416,7 +2431,7 @@ img {
 @media only screen and (max-height: 1440px) {
   .quality__content {
     margin-right: 56px;
-    margin-top: 50px;
+    margin-top: -90px;
     padding-left: 100px;
   }
   .quality__name {
@@ -2729,24 +2744,34 @@ img {
   z-index: 1;
 }
 
+.location__link {
+  position: relative;
+  z-index: 1;
+}
+
 .location__map {
+  position: absolute;
+  z-index: 1;
+  top: 130px;
+  left: 0;
+  right: 0;
+  bottom: 0;
   max-width: 100%;
-  -webkit-box-ordinal-group: 2;
-      -ms-flex-order: 1;
-          order: 1;
+  height: 760px;
   margin-left: auto;
   margin-right: auto;
+  display: block;
 }
 
 .location__form {
   background: #0055B8;
   border-radius: 5px;
-  width: 541px;
+  max-width: 541px;
   padding-top: 25px;
   padding-right: 34px;
   padding-bottom: 18px;
   padding-left: 33px;
-  margin-top: calc(50% - 290px);
+  margin-top: calc(50% - 240px);
 }
 
 .location__name {
@@ -2803,18 +2828,83 @@ img {
   margin-bottom: 27px;
 }
 
-@media only screen and (max-width: 1380px) {
-  .location__form {
-    margin-top: calc(50% - 390px);
-  }
-  .location__map {
-    top: 33%;
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .location__name::before {
+    background-image: url("../img/DP@2x.png");
+    background-size: contain;
   }
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1024px) {
   .location__form {
+    margin-left: 0;
+  }
+}
+
+@media only screen and (max-width: 840px) {
+  .location__map {
+    height: 650px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .location__map {
+    height: 600px;
+    margin-top: 60px;
+  }
+  .location__form {
+    margin-top: calc(50% - 190px);
+  }
+}
+
+@media only screen and (max-width: 570px) {
+  .location {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .location__form {
+    max-width: 455px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .location__container {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+  }
+  .location__map {
+    position: relative;
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+    z-index: 1;
+    margin-top: -70px;
     max-width: 100%;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+  }
+}
+
+@media only screen and (max-width: 495px) {
+  .location__form {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .location__map {
+    height: 200px;
+    margin-top: -100px;
+  }
+  .location__form {
+    margin-top: 30px;
   }
 }
 /*# sourceMappingURL=styles.css.map */
