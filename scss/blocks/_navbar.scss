@@ -1,0 +1,108 @@
+.navbar {
+
+    &__list {
+        display: flex;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+
+    &__item {
+        padding-bottom: 19px;
+        padding-top: 24px;
+    }
+
+    &__item:not(:last-child) {
+        margin-right: 35px;
+    }
+
+    &__link {
+        text-decoration: none;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 21px;
+        color: #FFFFFF;
+    }
+
+    &__link:hover {
+        color: #FFD600;
+    }
+
+    &__link:active {
+        opacity: 0.6;
+    }
+}
+
+.site-header--open .navbar {
+    display: block;
+}
+
+.site-header--nojs .navbar {
+    display: block;
+}
+
+.site-header--nojs .navbar__list {
+    position: absolute;
+    z-index: 22;
+    background-color: #0055B8;
+    flex-direction: column;
+    width: 100%;
+    top: 100%;
+    left: 0;
+}
+
+.site-header--nojs .navbar__item {
+    margin-right: 0;
+    padding-top: 23px;
+    padding-bottom: 24px;
+    border: 1px solid #FFD600;
+    width: 100%;
+    text-align: center;
+
+}
+
+.site-header--nojs .navbar__link {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    text-transform: uppercase;
+    color: #FFD600;
+}
+
+.site-header--nojs .header-bottom__toggler {
+    display: none;
+}
+
+@media only screen and (max-width: 750px) {
+    .navbar {
+        display: none;
+    }
+
+    .site-header--open .navbar__list {
+        position: absolute;
+        z-index: 22;
+        background-color: #0055B8;
+        flex-direction: column;
+        width: 100%;
+        top: 100%;
+        left: 0;
+    }
+    
+    .site-header--open .navbar__item {
+        margin-right: 0;
+        padding-top: 23px;
+        padding-bottom: 24px;
+        border: 1px solid #FFD600;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .site-header--open .navbar__link {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
+        text-transform: uppercase;
+        color: #FFD600;
+    }
+}

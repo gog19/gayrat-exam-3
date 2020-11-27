@@ -1,0 +1,222 @@
+.reviews {
+    padding-top: 39px;
+    padding-bottom: 38px;
+
+    &__heading {
+        margin-top: 0;
+        margin-bottom: 12px;
+        font-weight: 500;
+        font-size: 36px;
+        line-height: 42px;
+        color: #272727;
+        text-align: center;
+        position: relative;
+        z-index: 1;
+
+        &::before {
+            content: "";
+            width: 50px;
+            height: 3px;
+            background-color: #FFD600;
+            display: block;
+            margin-top: 10px;
+            margin-bottom: 15px;
+            position: absolute;
+            z-index: 1;
+            left: 48%;
+            top: -58%;
+        }
+
+        &::after {
+            content: "";
+            width: 275px;
+            height: 152px;
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background-image: url("../img/DP.png");
+            background-repeat: no-repeat;
+        }
+    }
+
+    &__text {
+        margin-top: 0;
+        margin-bottom: 26px;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 25px;
+        text-align: center;
+        color: #4D4D4D;
+        max-width: 463px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__people {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__person {
+        max-width: 332px;
+        display: flex;
+        flex-direction: column;
+
+        &--ivanov::before {
+            content: "";
+            width: 354px;
+            height: 240px;
+            display: block;
+            margin-bottom: 15px;
+            background-image: url("../img/ivanov.png");
+            background-repeat: no-repeat;
+        }
+
+        &--vasily::before {
+            content: "";
+            width: 354px;
+            height: 240px;
+            display: block;
+            margin-bottom: 15px;
+            background-image: url("../img/petr.png");
+            background-repeat: no-repeat;
+        }
+
+        &--petr::before {
+            content: "";
+            width: 354px;
+            height: 240px;
+            display: block;
+            margin-bottom: 15px;
+            background-image: url("../img/petr.png");
+            background-repeat: no-repeat;
+        }
+    }
+
+    .reviews__name {
+        margin-top: 0;
+        margin-bottom: 13px;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
+        color: #000000;
+    }
+
+    .reviews__feedback {
+        margin-top: 0;
+        margin-bottom: 0;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 25px;
+        color: #4D4D4D;
+        max-width: 332px;
+    }
+
+    &__box {
+        margin-top: 49px;
+        text-align: center;
+    }
+
+    &__link {
+        text-decoration: none;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 21px;
+        color: #4D4D4D;
+        padding: 22px 76px;
+        background-color: transparent;
+        border: 2px solid #0055B8;
+        border-radius: 5px;
+        max-width: 265px;
+
+        &:hover {
+            background-color: #0055B8;
+            color: #fff;
+        }
+
+        &:active {
+            opacity: 0.6;
+        }
+    }
+}
+
+@media
+    only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (   min--moz-device-pixel-ratio: 2),
+    only screen and (     -o-min-device-pixel-ratio: 2/1),
+    only screen and (        min-device-pixel-ratio: 2),
+    only screen and (                min-resolution: 192dpi),
+    only screen and (                min-resolution: 2dppx) { 
+
+        .reviews__heading::after {
+            background-image: url("../img/DP@2x.png");
+            background-size: contain;
+        }
+
+        .reviews__person--ivanov::before {
+            background-image: url("../img/ivanov@2x.png");
+            background-size: contain;
+        }
+
+        .reviews__person--vasily::before {
+            background-image: url("../img/petr@2x.png");
+            background-size: contain;
+        }
+
+        .reviews__person--petr::before {
+            background-image: url("../img/petr@2x.png");
+            background-size: contain;
+        }
+}
+
+@media only screen and (max-width: 1200px) {
+    .reviews {
+        overflow-x: hidden;
+    }
+    
+    .reviews__person--ivanov::before {
+        max-width: 100%;
+    }
+
+    .reviews__person--vasily::before {
+        max-width: 100%;
+    }
+
+    .reviews__person--petr::before {
+        max-width: 100%;
+    }
+
+    .reviews__person:last-child {
+        margin-right: 12;
+    }
+
+    .reviews__person:not(:last-child) {
+        margin-right: 20px;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .reviews__person--ivanov::before {
+        margin-bottom: 31px;
+    }
+
+    .reviews__person--vasily::before {
+        margin-bottom: 31px;
+    }
+
+    .reviews__person--petr::before {
+        margin-bottom: 31px;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .reviews__person {
+        max-width: 305px;
+    }
+}

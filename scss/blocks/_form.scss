@@ -1,0 +1,113 @@
+.form {
+    background: #0055B8;
+    position: relative;
+    z-index: 30;
+    border-radius: 5px;
+    width: 541px;
+    padding-top: 25px;
+    padding-right: 34px;
+    padding-bottom: 18px;
+    padding-left: 33px;
+    margin-top: -70px;
+
+    &__heading {
+        font-weight: 500;
+        font-size: 36px;
+        line-height: 42px;
+        color: #FFFFFF;
+        margin-top: 0;
+        margin-bottom: 29px;
+    }
+
+    &__input {
+        display: block;
+        width: 100%;
+        padding-top: 21px;
+        padding-bottom: 21px;
+        padding-left: 14px;
+        font-weight: 300;
+        border: 1px solid #FFFFFF;
+        box-sizing: border-box;
+        background-color: transparent;
+        border-radius: 5px;
+
+        &--phone {
+            margin-top: 12px;
+            margin-bottom: 12px;
+        }
+    }
+
+    &__input:focus {
+        background-color: #fff;
+    }
+
+    &__input::placeholder {
+        font-size: 14px;
+        line-height: 16px;
+        color: rgba(255, 255, 255, 0.5);    
+    }
+
+    &__btn {
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 21px;
+        color: #272727;
+        border: none;
+        background-color: transparent;
+        background: #FFD600;
+        border-radius: 5px;
+        padding: 0 63px;
+        padding-top: 18px;
+        padding-bottom: 16px;
+        margin-bottom: 22px;
+    }
+
+    &__btn:hover {
+        opacity: 0.8;
+    }
+
+    &__btn:active {
+        opacity: 0.6;
+    }
+
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &-text {
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 21px;
+            color: #FFFFFF;
+            max-width: 256px;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+    }
+
+    &__bottom-checkbox {
+        border: 1px solid #FFFFFF;
+        border-radius: 5px;
+        width: 35px;
+        height: 35px;
+    }
+}
+
+.form__bottom-input:checked + .form__bottom-checkbox {
+    background-image: url("../img/true.svg");
+    background-repeat: no-repeat;
+    background-position: center; 
+}
+
+@media only screen and (max-width: 520px) {
+    .form__btn {
+        width: 100%;
+    }
+
+    .form__bottom-checkbox {
+        flex-shrink: 0;
+        margin-left: 10px;
+    }
+}
+

@@ -1,0 +1,171 @@
+.tech {
+    padding-top: 32px;
+    padding-bottom: 38px;
+    position: relative;
+    z-index: 1;
+
+    &__container {
+        margin-top: 51px;
+        display: flex;
+        margin-left: calc(50% - 130px);
+    }
+
+    &__img {
+        position: absolute;
+        z-index: 1;
+        left: calc(50% - 970px);
+        top: 32px;
+    }
+
+    &__title {
+        margin-top: 0;
+        margin-bottom: 15px;
+        font-weight: 500;
+        font-size: 36px;
+        line-height: 42px;
+        color: #272727;
+        max-width: 503px;
+        position: relative;
+        z-index: 1;
+
+        &::before {
+            content: "";
+            width: 50px;
+            height: 3px;
+            background-color: #FFD600;
+            display: block;
+            margin-top: 10px;
+            margin-bottom: 15px;
+        }
+
+        &::after {
+            content: "";
+            width: 275px;
+            height: 152px;
+            position: absolute;
+            z-index: -1;
+            top: 25%;
+            left: 0;
+            background-image: url("../img/DP.png");
+            background-repeat: no-repeat;
+        }
+    }
+
+    &__text {
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 25px;
+        color: #000000;
+        margin-top: 0;
+        margin-bottom: 27px;
+        max-width: 760px;
+    }
+
+    &__list {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+
+    &__item {
+        max-width: 610px;
+        display: flex;
+
+        &--expert::before {
+            content: "";
+            width: 67px;
+            height: 67px;
+            display: block;
+            margin-right: 33px;
+            background-image: url("../img/expert.png");
+            background-repeat: no-repeat;
+        }
+
+        &--tech::before {
+            content: "";
+            width: 72px;
+            height: 70px;
+            display: block;
+            margin-right: 33px;
+            background-image: url("../img/tech.png");
+            background-repeat: no-repeat;
+        }
+
+        &--location::before {
+            content: "";
+            width: 62px;
+            height: 62px;
+            display: block;
+            margin-right: 33px;
+            background-image: url("../img/location.png");
+            background-repeat: no-repeat;
+        }
+    }
+
+    &__content-heading {
+        margin-top: 0;
+        margin-bottom: 5px; 
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 21px;
+        color: #000000;
+    }
+
+    &__content-text {
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 20px;
+        color: #4D4D4D;
+        margin-top: 0;
+        max-width: 510px;
+    }
+}
+
+@media
+    only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (   min--moz-device-pixel-ratio: 2),
+    only screen and (     -o-min-device-pixel-ratio: 2/1),
+    only screen and (        min-device-pixel-ratio: 2),
+    only screen and (                min-resolution: 192dpi),
+    only screen and (                min-resolution: 2dppx) { 
+
+        .tech__title::after {
+            background-image: url("../img/DP@2x.png");
+            background-size: contain;
+        }
+
+        .tech__item--expert::before {
+            background-image: url("../img/expert@2x.png");
+            background-size: contain;
+        }
+
+        .tech__item--tech::before {
+            background-image: url("../img/tech@2x.png");
+            background-size: contain;
+        }
+
+        .tech__item--location::before {
+            background-image: url("../img/location@2x.png");
+            background-size: contain;
+        }
+}
+
+// @media only screen and (max-width: 1500px) {
+//     .tech__container {
+//         margin-left: 95px;
+//     }
+
+//     .tech__img {
+//         margin-left: calc(50% - 840px);
+//     }
+// }
+
+// @media only screen and (max-width: 1500px) {
+//     .tech__container {
+//         margin-left: 95px;
+//     }
+
+//     .tech__img {
+//         margin-left: calc(50% - 840px);
+//     }
+// }

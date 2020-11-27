@@ -1,8 +1,4 @@
-body {
-    margin: 0;
-  }
-  
-  html {
+html {
     height: 100%;
     box-sizing: border-box;
     scroll-behavior: smooth;
@@ -15,10 +11,17 @@ body {
   }
   
   body {
+    display: flex;
+    flex-direction: column;
     height: 100%;
     padding: 0;
     margin: 0;
-    font-family: "Arial", sans-serif;
+    font-family: "Roboto", "Arial", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: #ffffff;
+    color: #222;
+    overflow-x: hidden;
   }
   
   img {

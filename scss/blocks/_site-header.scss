@@ -1,0 +1,12 @@
+.site-header {
+    position: fixed;
+    z-index: 50;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.site-header--nojs .site-header {
+    position: relative;
+    z-index: 1;
+}

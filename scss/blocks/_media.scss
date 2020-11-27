@@ -1,0 +1,33 @@
+.media {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    align-items: center;
+
+    &__items {
+        line-height: 0;
+    }
+
+    &__items:not(:first-child) {
+        margin-left: 13px;
+    }
+
+    &__links {
+        display: block;
+    }
+
+    &__links:hover {
+        opacity: 0.8;
+    }
+
+    &__links:active {
+        opacity: 0.6;
+    }
+}
+
+@media only screen and (max-width: 840px) {
+    .media {
+        display: none;
+    }
+}
