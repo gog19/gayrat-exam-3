@@ -26,8 +26,37 @@
     }
 }
 
+.body--nojs .media {
+    display: block;
+    display: flex;
+    position: absolute;
+    z-index: 55;
+    top: calc(50% + 380px);
+    left: calc(50% - 45px);
+}
+
+.body--nojs .media__items {
+    margin-top: 63px;
+    margin-bottom: 26px;
+}
+
 @media only screen and (max-width: 840px) {
     .media {
         display: none;
     }
+
+    .site-header--open .media {
+        display: block;
+        display: flex;
+        position: absolute;
+        z-index: 55;
+        top: calc(50% + 380px);
+        left: 44%;
+    }
+
+    .site-header--open .media__items {
+        margin-top: 63px;
+        margin-bottom: 26px;
+    }
+
 }

@@ -100,6 +100,29 @@
     background-position: center; 
 }
 
+@media only screen and (max-width: 1024px) {
+    .form {
+        margin-right: -20px;
+    }
+}
+
+
+@media only screen and (max-width: 1023px) {
+    .form {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0;
+        width: 800px;
+    }
+}
+
+@media only screen and (max-width: 760px) {
+    .form {
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+}
+
 @media only screen and (max-width: 520px) {
     .form__btn {
         width: 100%;

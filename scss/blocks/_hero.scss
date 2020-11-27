@@ -1,10 +1,13 @@
 .hero {
-    margin-top: 125px;
+    margin-top: 124px;
     padding-top: 270px;
-    padding-bottom: 317px;
+    padding-bottom: 395px;
     position: relative;
     z-index: 1;
-    overflow-x: hidden;
+    overflow-x: hidden; 
+    overflow-y: hidden;
+    position: relative;
+    z-index: 1;
 
     &__list {
         margin: 0;
@@ -14,15 +17,13 @@
 
     &__img {
         position: absolute;
-        z-index: 2;
+        z-index: -1;
         left: 0;
         top: 0;
         right: 0;
         bottom: 0;
         margin-left: auto;
         margin-right: auto;
-        max-width: 100%;
-        max-height: 100%;
     }
 
     .hero__container {
@@ -120,5 +121,114 @@
 @media only screen and (max-width: 1024px) {
     .hero {
         margin-top: 65px;
+    }
+}
+
+@media only screen and (max-width: 1023px) {
+    .hero {
+        margin-top: 65px;
+        padding-top: 0;
+        padding-bottom: 0;
+
+        &__title {
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 650px;
+        }
+
+        &__text {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        &__link {
+            display: none;
+        }
+
+        &__buttons {
+            top: calc(50% + 600px);
+        }
+    }
+
+    .hero__img {
+        position: relative;
+        z-index: 1;
+    }
+}
+
+@media only screen and (max-width: 810px) {
+    .hero__buttons {
+        top: calc(50% + 450px);
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .hero__buttons {
+        top: calc(50% + 400px);
+    }
+}
+
+@media only screen and (max-width: 570px) {
+    .hero__buttons {
+        top: calc(50% + 340px);
+    }
+}
+
+@media only screen and (max-width: 520px) {
+    .hero__text {
+        line-height: 25px;
+    }
+
+    .hero__title {
+        font-size: 30px;
+        line-height: 35px;
+    }
+
+    .hero__right {
+        background-image: url("../img/btnnext.svg");
+        width: 44px;
+        height: 44px;
+    }
+
+    .hero__left {
+        background-image: url("../img/btnprev.svg");
+        width: 27px;
+        height: 44px;
+        margin-right: 0;        
+    }
+}
+
+.body--nojs .hero {
+    padding-top: 455px;
+}
+
+@media only screen and (max-width: 475px) {
+    .hero__buttons {
+        top: calc(50% + 300px);
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .hero__buttons {
+        top: calc(50% + 260px);
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .hero__buttons {
+        top: calc(50% + 480px);
+    }
+}
+
+@media only screen and (max-width: 440px) {
+    .hero__buttons {
+        top: calc(50% + 430px);
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    .hero__buttons {
+        top: calc(50% + 400px);
     }
 }

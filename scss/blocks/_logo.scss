@@ -16,7 +16,10 @@
     &__yellow {
         color: #FFD600;
     }
+}
 
+.body--nojs .logo {
+    text-align: center;
 }
 
 @media only screen and (max-width: 1024px) {

@@ -3,16 +3,25 @@
     padding-bottom: 39px;
     position: relative;
     z-index: 1;
+    overflow-x: hidden;
 
-    &__img {
-        position: absolute;
-        z-index: 1;
-        right: calc(50% - 960px);
-        top: 32px;
+    &__container {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+
+    &__container::before {
+        content: "";
+        width: 750px;
+        height: 600px;
+        margin-right: -300px;
+        background-image: url("../img/doctor.png");
+        background-repeat: no-repeat;
     }
 
     &__content {
-        margin-top: 150px
+        margin-top: 150px;
     }
 
     &__name {
@@ -35,7 +44,7 @@
             margin-bottom: 15px;
             position: absolute;
             z-index: 1;
-            right: 44%;
+            right: 4%;
             top: -26px;
         }
 
@@ -46,7 +55,7 @@
             position: absolute;
             z-index: -1;
             top: 15%;
-            left: 37%;
+            right: 1%;
             background-image: url("../img/DP.png");
             background-repeat: no-repeat;
         }
@@ -82,6 +91,7 @@
         text-decoration: none;
         border-radius: 5px;
         margin-left: 36px;
+        flex-shrink: 0;
     }
 
     &__link:hover {
@@ -91,6 +101,102 @@
     &__link:active {
         opacity: 0.6;
     }
+}
 
-    
+@media
+    only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (   min--moz-device-pixel-ratio: 2),
+    only screen and (     -o-min-device-pixel-ratio: 2/1),
+    only screen and (        min-device-pixel-ratio: 2),
+    only screen and (                min-resolution: 192dpi),
+    only screen and (                min-resolution: 2dppx) { 
+
+        .quality__name::before {
+            background-image: url("../img/DP@2x.png");
+            background-size: contain;
+        }
+
+        .quality__container::before {
+            background-image: url("../img/doctor@2x.png");
+            background-size: contain;
+        }
+}
+
+@media only screen and (max-height: 1440px) {
+    .quality__content {
+        margin-right: 56px;
+        margin-top: 50px;
+        padding-left: 100px;
+    }
+
+    .quality__name {
+        max-width: 491px;
+    }
+
+    .quality__text {
+        max-width: 510px;
+    }
+
+    .quality__container::before {
+        margin-right: -150px;
+    }
+}
+
+@media only screen and (max-width: 970px) {
+    .quality__container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .quality__container::before {
+        margin-right: 0;
+        max-width: 100%;
+    }
+
+    .quality__content {
+        padding-left: 70px;
+    }
+
+    .quality__name {
+        max-width: 100%;
+    }
+
+    .quality__text {
+        max-width: 100%;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .quality__content {
+        padding-left: 0;
+    }
+}
+
+@media only screen and (max-width: 520px) {
+    .quality__container::before {
+        width: 524px;
+        height: 349px;
+        position: absolute;
+        top: 5%;
+    }
+
+    .quality__content {
+        padding-top: 380px;
+        margin-right: 0;
+    }
+
+    .quality__link {
+        padding-left: 42px;
+        padding-right: 41px;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .quality__container::before {
+        background-image: url("../img/doctor-rs.png");
+        content: "";
+        width: 484px;
+        height: 309px;
+    }
 }

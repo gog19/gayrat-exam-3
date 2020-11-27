@@ -20,9 +20,16 @@
         border-radius: 5px;
         max-width: 300px;
 
+        &:last-child .app__item-text {
+            display: -webkit-box;
+            overflow: hidden;
+            -webkit-line-clamp: 5;
+            -webkit-box-orient: vertical;
+        }
+
 
         &--treat {
-            padding-top: 39px;
+            padding-top: 38px;
             padding-bottom: 57px;
             padding-left: 37px;
             padding-right: 37px;
@@ -81,5 +88,36 @@
         &--pros {
             max-width: 201px;
         }
+    }
+}
+
+@media
+    only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (   min--moz-device-pixel-ratio: 2),
+    only screen and (     -o-min-device-pixel-ratio: 2/1),
+    only screen and (        min-device-pixel-ratio: 2),
+    only screen and (                min-resolution: 192dpi),
+    only screen and (                min-resolution: 2dppx) { 
+
+        .app__item--treat::before {
+            background-image: url("../img/teeth@2x.png");
+            background-size: contain;
+        }
+
+        .app__item--pros::before {
+            background-image: url("../img/mouse@2x.png");
+            background-size: contain;
+        }
+}
+
+@media only screen and (max-width: 1024px) {
+    .app__list {
+        margin-left: -20px;
+    }
+}
+
+@media only screen and (max-width: 1023px) {
+    .app__list {
+        display: none;
     }
 }
