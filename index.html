@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body class="site-body site-body--nojs">
+<body class="body body--nojs">
 
     <!-- WEBSITESAYT ZOOM 80% uchun DEFAULT -->
     <!-- 1024 px Ni korish uchun WIDTHga yozish kerak. Chunki menda 1023px ham bor  -->
@@ -430,14 +430,14 @@
     <script>
 
         let siteHeader = document.querySelector('.site-header');
-        let siteBody = document.querySelector('.site-body');
+        let siteBody = document.querySelector('.body');
         let toggler = document.querySelector('.header-bottom__toggler');
 
         toggler.addEventListener('click', function () {
             siteHeader.classList.toggle('site-header--open');
         });
 
-        siteBody.classList.remove('site-body--nojs');
+        siteBody.classList.remove('body--nojs');
 
     </script>
 
